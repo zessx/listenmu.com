@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>MÜ — Official Website</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+        <link rel="manifest" href="/img/site.webmanifest">
+        <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#853a7e">
+        <link rel="shortcut icon" href="/img/favicon.ico">
+        <meta name="msapplication-TileColor" content="#853a7e">
+        <meta name="msapplication-config" content="/img/browserconfig.xml">
+        <meta name="theme-color" content="#853a7e">
+
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                overflow: hidden;
+            }
+            h1 {
+                margin-top: 0;
+                margin-bottom: 1em;
+                max-width: 50%;
+            }
+            #logo {
+                display: block;
+                width: 100%;
+            }
+            ul {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 0;
+                list-style: none;
+                font-family: monospace;
+                text-transform: uppercase;
+            }
+            li {
+                padding: 0 0.5em;
+            }
+            a {
+                display: block;
+                position: relative;
+                color: white;
+                text-decoration: none;
+                padding: 0.5em;
+            }
+            a::before,
+            a::after {
+                content: '·';
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                opacity: 0;
+                transition: all 0.3s;
+            }
+            a::before {
+                left: 0;
+            }
+            a::after {
+                right: 0;
+            }
+            a:hover::before,
+            a:focus::before {
+                opacity: 1;
+                left: -0.5em;
+            }
+            a:hover::after,
+            a:focus::after {
+                opacity: 1;
+                right: -0.5em;
+            }
+            .background {
+                position: fixed;
+                z-index: -1;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                overflow: hidden;
+                /*
+                 * The Rim Nebula
+                 * Credits: Ivan Bok
+                 * License: CC 4.0
+                 */
+                background-image: url('./img/background.jpg');
+                background-size: cover;
+                background-position: center center;
+                background-repeat: no-repeat;
+                -webkit-animation: 60s linear alternate zoom;
+                animation: 200s linear alternate zoom;
+            }
+
+            @-webkit-keyframes zoom {
+                from {
+                    transform: scale(1);
+                }
+                to {
+                    transform: scale(2);
+                }
+            }
+            @keyframes zoom {
+                from {
+                    transform: scale(1);
+                }
+                to {
+                    transform: scale(2);
+                }
+            }
+
+            @media screen and (min-width: 400px) {
+                ul {
+                    flex-direction: row;
+                }
+                a::before,
+                a::after {
+                    top: initial;
+                    left: 50%;
+                    right: initial;
+                    transform: translateX(-50%);
+                }
+                a::before {
+                    top: 0;
+                }
+                a::after {
+                    bottom: 0;
+                }
+                a:hover::before,
+                a:focus::before {
+                    opacity: 1;
+                    left: 50%;
+                    top: -0.5em;
+                }
+                a:hover::after,
+                a:focus::after {
+                    opacity: 1;
+                    right: initial;
+                    bottom: -0.5em;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1 aria-label="MÜ is making music">
+            <svg id="logo" version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2300 2300" preserveAspectRatio="xMidYMid meet">
+                <defs>
+                    <path id="logo__char" d="M0 0 c-5 -14 -14 -37 -19 -49 l-9 -24 -104 14 c-117 15 -544 53 -599 53 -35 0 -37 -2 -43 -37 -4 -21 -9 -50 -12 -65 -5 -27 -5 -28 43 -28 26 0 53 -4 60 -8 25 -16 253 -637 253 -688 0 -8 8 -14 17 -14 28 0 143 22 143 27 0 33 -160 472 -237 651 -7 16 38 16 207 -3 158 -18 200 -25 200 -34 0 -3 -38 -67 -85 -140 -47 -74 -82 -137 -78 -141 4 -4 32 -20 61 -35 61 -33 46 -44 146 105 73 109 218 370 213 384 -3 8 -42 24 -124 50 -19 6 -25 2 -33 -18z"/>
+                </defs>
+                <g fill="#FFFFFF" stroke="none">
+                    <circle id="logo__circle" cy="1145" cx="1145" r="1060" fill="none" stroke="#FFFFFF" stroke-width="150"/>
+                    <circle id="logo__dot--top" cy="495" cx="1145" r="75"/>
+                    <circle id="logo__dot--bottom" cy="1785" cx="1145" r="75"/>
+                    <use id="logo__char--left" xlink:href="#logo__char" x="805" y="1548" transform="rotate(180, 643, 1131)"/>
+                    <use id="logo__char--right" xlink:href="#logo__char" x="1820" y="1566" />
+                </g>
+            </svg>
+        </h1>
+        <ul>
+            <li>
+                <a href="https://soundcloud.com/listen-mu" target="_blank">SoundCloud</a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/listenmuu" target="_blank">Instagram</a>
+            </li>
+            <li>
+                <a href="https://twitter.com/listenmu" target="_blank">Twitter</a>
+            </li>
+        </ul>
+        <div class="background" aria-hidden="true"></div>
+    </body>
+</html>
